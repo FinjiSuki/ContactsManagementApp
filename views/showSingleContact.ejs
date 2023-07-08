@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Contact Details</title>
+  </head>
+
+  <body>
+    <div class="bg-gray-50 my-10 flex justify-center h-fit">
+      <div class="bg-white rounded-lg shadow-lg p-2 sm:p-4 md:p-6 lg:p-8 w-full">
+        
+		
+		<!-- Write your html code here -->
+		<div class="px-4 py-5 sm:px-6 border border-b-0">
+          <h3 class="text-base font-semibold leading-6 text-gray-900">Contact Information</h3>
+          <!-- <p class="mt-1 max-w-2xl text-sm text-gray-500">Personal details and application.</p> -->
+        </div>
+        <div class="border-t border-gray-200">
+          <dl>
+            <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                    <dt class="text-sm font-medium text-gray-500">Contact Unique ID</dt>
+                    <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0"><%= singleContactObj._id %></dd>
+                  </div>
+                  <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                    <dt class="text-sm font-medium text-gray-500">Contact Name</dt>
+                    <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0"><%= singleContactObj.name %></dd>
+                  </div>
+                  <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                    <dt class="text-sm font-medium text-gray-500">Contact Email</dt>
+                    <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0"><%= singleContactObj.email %></dd>
+                  </div>
+                  <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                    <dt class="text-sm font-medium text-gray-500">Phone Number</dt>
+                    <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0"><%= singleContactObj.phone %></dd>
+                  </div>
+                  <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                    <dt class="text-sm font-medium text-gray-500">Saved On</dt>
+                    <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0"><%= singleContactObj.createdAt %></dd>
+                  </div>
+                  <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                    <dt class="text-sm font-medium text-gray-500">Contact Last Updated On</dt>
+                    <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0"><%= singleContactObj.updatedAt %></dd>
+                  </div>
+                  <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                    <dt class="text-sm font-medium text-gray-500">Contact Picture On</dt>
+                    <!-- <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0"><%= singleContactObj.profilePhoto %></dd> -->
+                    <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
+                      <!-- <% if(singleContactObj.profilePhoto !== null){ %>
+                        <img class="h-20 w-20 rounded-full" src='http://localhost:5001/uploads/users/<%= userId %>/<%= singleContactObj.profilePhoto %>' />
+                         <img class="h-20 w-20 rounded-full" src='http://localhost:5001/uploads/users/642540b5f87f446a98b01533/1682165688374-mobile.jpg' />
+                      <% } else { %> -->
+                        <svg
+                  class="h-20 w-20 text-gray-300"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                      <!-- <% } %> -->
+                    </dd>
+                  </div>
+          </dl>
+        </div>
+        <div class="m-3 pt-12 flex justify-around">
+          <a href="/contacts"><button class="bg-indigo-500 hover:bg-indigo-400 text-white font-bold py-2 px-4 border-b-4 border-indigo-700 hover:border-indigo-500 rounded">See All My Contacts</button></a>
+          <a href="/user/logout"><button class="bg-purple-500 hover:bg-purple-400 text-white font-bold py-2 px-4 border-b-4 border-purple-700 hover:border-purple-500 rounded">LOGOUT</button></a>
+        </div>
+		
+        
+      </div>
+    </div>
+  </body>
+</html>

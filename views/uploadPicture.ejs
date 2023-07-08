@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="/single-photo" method="post" enctype="multipart/form-data">
+      <div class="form-group">
+        <!-- <p><%= userId %></p> -->
+        <input type="text" class="form-control-file" name="id" value=<%= userId %> readonly />
+        <input type="file" class="form-control-file" name="uploaded_Img" />
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Add Image caption"
+          name="imageCaption" required
+        />
+        <input type="submit" value="Upload" class="btn btn-default" />
+      </div>
+    </form>
+    <hr />
+    <form action="/ProfilePageUploads" method="post" enctype="multipart/form-data">
+      <div class="form-group">
+        <input type="file" class="form-control-file" name="avatar" />
+        <input type="file" class="form-control-file" name="gallery" multiple />
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Write description for your profile here"
+          name="name" required
+        />
+        <input type="submit" value="Update Profile Page" class="btn btn-default" />
+      </div>
+    </form>
+    <hr />
+    <form action="/multiple-photos" method="post" enctype="multipart/form-data">
+      <div class="form-group">
+        <input type="hidden" class="form-control-file" name="id" value=<%= userId %> />
+        <input type="file" class="form-control-file" name="uploaded_Images" multiple />
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Add caption for images"
+          name="allImagesCaption" required
+        />
+        <input type="submit" value="Upload" class="btn btn-default" />
+      </div>
+    </form>
+  </body>
+</html>

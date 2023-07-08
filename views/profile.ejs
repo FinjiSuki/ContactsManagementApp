@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Profile Page</title>
+  </head>
+
+  <body>
+    <div class="my-10 flex justify-center h-fit">
+      <div
+        class="bg-white rounded-lg shadow-lg p-2 sm:p-4 md:p-6 lg:p-8 w-full"
+      >
+        <div class="px-4 py-5 sm:px-6 border border-b-0">
+          <h3 class="text-base font-semibold leading-6 text-gray-900">
+            User Information
+          </h3>
+          <p class="mt-1 max-w-2xl text-sm text-gray-500">
+            All Personal details and settings information.
+          </p>
+        </div>
+        <div class="border-t border-gray-200">
+          <dl>
+            <div
+              class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6"
+            >
+              <dt class="text-sm font-medium text-gray-500">Unique ID</dt>
+              <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
+                <%= _id %>
+              </dd>
+            </div>
+            <div
+              class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6"
+            >
+              <dt class="text-sm font-medium text-gray-500">User Name</dt>
+              <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
+                <%= username %>
+              </dd>
+            </div>
+            <div
+              class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6"
+            >
+              <dt class="text-sm font-medium text-gray-500">Email address</dt>
+              <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
+                <%= email %>
+              </dd>
+            </div>
+            <div
+              class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6"
+            >
+              <dt class="text-sm font-medium text-gray-500">Registered On</dt>
+              <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
+                <%= createdAt %>
+              </dd>
+            </div>
+            <div
+              class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6"
+            >
+              <dt class="text-sm font-medium text-gray-500">
+                Profile Last Updated On
+              </dt>
+              <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
+                <%= updatedAt %>
+              </dd>
+            </div>
+          </dl>
+        </div>
+        <div class="m-3 flex justify-around">
+          <a href="/contacts"
+            ><button
+              class="bg-indigo-500 hover:bg-indigo-400 text-white font-bold py-2 px-4 border-b-4 border-indigo-700 hover:border-indigo-500 rounded"
+            >
+              See All My Contacts
+            </button></a
+          >
+          <a href="/user/logout"
+            ><button
+              class="bg-purple-500 hover:bg-purple-400 text-white font-bold py-2 px-4 border-b-4 border-purple-700 hover:border-purple-500 rounded"
+            >
+              LOGOUT
+            </button></a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
